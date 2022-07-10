@@ -1,12 +1,12 @@
 {
   "name": "snek-functions",
-  "version": "1.0.0",
+  "version": "13.0.0",
   "private": true,
   "type": "module",
   "description": "Generated with `snek-functions init -f functions`",
   "author": "snek-at",
   "dependencies": {
-    "@snek-at/functions": "*"
+    "@snek-at/functions": "0.0.39"
   },
   "devDependencies": {
     "nodemon": "^2.0.19",
