@@ -1,1 +1,0 @@
-/workspaces/sf-django-orm-prototype/test/python/manage.py
