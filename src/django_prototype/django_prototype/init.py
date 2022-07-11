@@ -7,10 +7,12 @@ import os
 import django
 
 
-def init():
+def init_django():
     """
     Initializes the django environment.
     """
     sys.dont_write_bytecode = True
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_prototype.settings')
     django.setup()
+
+    print('Django environment initialized.')

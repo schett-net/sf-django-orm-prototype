@@ -1,18 +1,13 @@
-import {fn} from './factory'
-import { Project } from './interfaces'
-import {spawnChild} from './factory'
+import { fn, sendToProxy } from "./factory";
+import { Project } from "./interfaces";
 
-
-const pyListProjects = fn(
+const pyListProjects = fn<{}, Project[]>(
   async () => {
-    const data = await spawnChild('python', './django_prototype/django_prototype/functions/list.py')
-    let projects:Project[] = JSON.parse(data)
-
-    return projects
+    return sendToProxy<{}, Project[]>("pyListProjects");
   },
   {
-    name: 'pyListProjects'
+    name: "pyListProjects",
   }
-)
+);
 
-export default pyListProjects
+export default pyListProjects;
